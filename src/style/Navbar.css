@@ -1,0 +1,230 @@
+*, *::after, *::before {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 8vh;
+    background: #1E3658;
+}
+
+.nav__brand {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 80vh;
+}
+
+.nav__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+}
+
+.nav__toggler div {
+    width: 2.5rem;
+    height: 0.2rem;
+    margin: 0.4rem;
+    background: #fff;
+    transition: 0.4s ease-in;
+}
+
+.nav__toggler {
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .nav__toggler {
+        display: block;
+    }
+
+    .nav__menu {
+        position: fixed;
+        top: 8vh; /* Adjust this value for better alignment */
+        right: -50px; /* Show the menu by moving it to 0 */
+        width: 70%; /* Adjust the width to your preference */
+        height: 92vh;
+        background: #1E3658;
+        flex-direction: column;
+        transform: translateX(0); /* Show the menu initially */
+        transition: 0.5s ease-in;
+        z-index: 1000; /* Add a higher z-index to ensure it's on top of other content */
+    }
+
+    /* Activate nav class */
+    .nav__active .nav__menu {
+        transform: translateX(-100%); /* Hide the menu by moving it back */
+    }
+
+    /* Toggler icon animation */
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-4px, 5px);
+    }
+    
+    .toggle .line2 {
+        opacity: 0;
+    }
+    
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-4px, -5px);
+    }
+}
+*, *::after, *::before {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+li a hover {
+    opacity: 1;
+    color: #000;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 8vh;
+    background: #1E3658;
+}
+
+.nav__brand {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+}
+
+.nav__toggler div {
+    width: 2.5rem;
+    height: 0.2rem;
+    margin: 0.4rem;
+    background: #fff;
+    transition: 0.4s ease-in;
+}
+
+.nav__toggler {
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .nav__toggler {
+        display: block;
+    }
+    .nav__brand {
+        margin: 0;
+    }
+
+    .nav__menu {
+        position: fixed;
+        top: 8vh;
+        right: 0;
+        width: 50%; 
+        height: 42vh; 
+        background: #1E3658;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: 0.5s ease-in;
+    }
+
+    /*-Activate nav class-*/
+    .nav__active {
+        transform: translateX(0);
+    }
+
+    /* toggler  icn animation */
+    .toggle .line1,
+    .toggle .line3 {
+        transform: rotate(-45deg) translate(-3px, 5px); /* Adjusted position */
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+}
+/* Toggler icon styles */
+.nav__toggler div {
+    width: 2.5rem;
+    height: 0.2rem;
+    margin: 0.4rem;
+    background: #fff;
+    transition: 0.4s ease-in;
+}
+
+.nav__toggler {
+    cursor: pointer;
+    display: none;
+}
+
+/* Media query for responsive menu */
+@media screen and (max-width: 768px) {
+    .nav__toggler {
+        display: block;
+    }
+
+    /* Adjusted toggle bar styles */
+    .nav__toggler .line1,
+    .nav__toggler .line2,
+    .nav__toggler .line3 {
+        width: 2.5rem; /* Set width for all lines */
+        height: 0.2rem;
+        margin: 0.4rem;
+        background: #fff;
+        transition: 0.4s ease-in;
+    }
+
+    /* Toggler icon animation */
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-3px, 5px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-3px, -5px);
+    }
+}
+
