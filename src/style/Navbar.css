@@ -26,6 +26,11 @@ a {
     justify-content: space-around;
     height: 8vh;
     background: #1E3658;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
 }
 
 .nav__brand {
@@ -121,6 +126,8 @@ li a hover {
     justify-content: space-around;
     height: 8vh;
     background: #1E3658;
+    width: 100%;
+    position: fixed;
 }
 
 .nav__brand {
@@ -148,9 +155,11 @@ li a hover {
     display: none;
 }
 
+
 @media screen and (max-width: 768px) {
     .nav__toggler {
         display: block;
+        margin-left: 30vh;
     }
     .nav__brand {
         margin: 0;
@@ -183,26 +192,11 @@ li a hover {
         opacity: 0;
     }
 }
-/* Toggler icon styles */
-.nav__toggler div {
-    width: 2.5rem;
-    height: 0.2rem;
-    margin: 0.4rem;
-    background: #fff;
-    transition: 0.4s ease-in;
-}
 
-.nav__toggler {
-    cursor: pointer;
-    display: none;
-}
 
 /* Media query for responsive menu */
 @media screen and (max-width: 768px) {
-    .nav__toggler {
-        display: block;
-    }
-
+   
     /* Adjusted toggle bar styles */
     .nav__toggler .line1,
     .nav__toggler .line2,
@@ -228,3 +222,15 @@ li a hover {
     }
 }
 
+/* Add hover effect for nav links */
+.nav__link:hover {
+    color: #000; /* Change color on hover */
+    opacity: 1;
+}
+
+/* Adjust for hover effect on toggler lines */
+.nav__toggler .line1:hover,
+.nav__toggler .line2:hover,
+.nav__toggler .line3:hover {
+    background-color: #000; /* Change background on hover */
+}

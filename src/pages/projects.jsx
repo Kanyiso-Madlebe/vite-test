@@ -7,7 +7,7 @@ import TaxCalculatorImage from '../images/tatxtatx.jpg';
 function Projects() {
   return (
     
-    <section className="projects">
+    <section className="projects" id="projects">
       <div className="about-text">
         <h2 className="section-title">Projects</h2>
       </div>

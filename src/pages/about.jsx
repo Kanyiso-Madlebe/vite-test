@@ -4,7 +4,7 @@ import Young from '../images/young.png';
 
 const About = () => {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <div className="main">
         <img src={Young} alt="Profile" />
         <div className="about-text">

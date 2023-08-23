@@ -6,7 +6,7 @@ import Wall from '../images/wallp.jpg';
 
 function Home() {
     return (
-        
+        <div className="content">
         <section className="home" id="home">
         <div className="wallpaper" style={{ backgroundImage: `url(${Wall})` }}>
             <div className="home-data">
@@ -59,7 +59,7 @@ function Home() {
             </div>
             </div>
         </section>
-       
+        </div>
     );
 }
 
