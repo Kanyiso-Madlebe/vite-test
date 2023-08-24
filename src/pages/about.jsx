@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../style/about.css'; 
 import Young from '../images/young.png';
 
@@ -15,7 +16,9 @@ const About = () => {
             Lrorem Ipsum has been the industry's standard dummy text ever since the 1500s,
             when an unknown printer took a galley of type and scrambled it to make a type specimen book.
           </p>
-          <button type="button">Read More</button>
+          <Link to="/extended">
+            <button type="button">Read More</button>
+          </Link>
         </div>
       </div>
     </section>
