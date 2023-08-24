@@ -14,7 +14,7 @@ function Projects() {
         {/* Card 1 */}
         <div className="card card1">
           <div className="container">
-          <a href="https://github.com/Kanyiso-Madlebe/Mzamomtsha-primary-School">
+          <a href="https://super-quokka-c5659f.netlify.app/">
               <img src={MzamomtshaImage} alt="Mzamomtsha" />
             </a>
           </div>
