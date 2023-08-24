@@ -41,13 +41,16 @@ function Home() {
                                 <a href='src/components/Kanyiso Madlebe-Resume (1).pdf' target="_blank" rel="noopener noreferrer">Resume</a>
                             </motion.button>
 
-                        <motion.button
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                            className="button button2"
-                        >
+                            <motion.button
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        className="button button2"
+                    >
+                        <a href="https://github.com/Kanyiso-Madlebe" target="_blank" rel="noopener noreferrer">
                             Projects
-                        </motion.button>
+                        </a>
+                    </motion.button>
+
                     </motion.div>
                 </motion.div>
                 <div className="home-img-btn-container">

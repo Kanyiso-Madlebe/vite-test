@@ -1,10 +1,10 @@
 .home {
-    height: 640px;
+    height: 100vh;
     
   }
   
   .wallpaper {
-    height:99vh;
+    height:100vh;
   }
  /* Adjust layout for larger screens */
 .home-data {
@@ -15,6 +15,7 @@
 .home-text {
   width: 50%; /* Take up half of the available width */
   padding-left: 40px;
+  padding-bottom: 70px;
 }
 
 .home-img-btn-container {
@@ -22,6 +23,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 20vh;
 }
   
   
@@ -101,16 +103,17 @@
 }
 
 .button1 {
-  background: #000;
+  background: rgba(128, 128, 128, 0.562);
   color: #fff;
   margin-right: 59px;
 }
 
 .button2 {
-  background: #fff;
+  background: #900707cc;
   color: #000;
   border: 2px solid #000;
   margin-top: 20px;
+  text-color: #000;
 } 
   
  /* Media query for smaller screen sizes */
@@ -151,7 +154,7 @@
     background: rgba(58, 84, 122, 0.98);
   }
   .wallpaper {
-    height:190vh;
+    height:200vh;
   }
 
 }
