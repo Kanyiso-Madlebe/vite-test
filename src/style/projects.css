@@ -1,5 +1,5 @@
 .projects{
-    background: #3A547A;
+    background: #0c1e3a;
     height: 100vh;
     display: grid;
     place-items: center center;
@@ -44,6 +44,7 @@ img{
   text-align: center;
   margin-bottom: 2px;
   font-size: 50px;
+  color: #fff;
 }
 .details p {
     font-size: 16px;
@@ -59,10 +60,15 @@ img{
   }
 
   .card {
-      margin: 20px auto;
+      margin: 0px auto;
       
   }
   .projects {
     margin-bottom: 840px;
+    background: #3A547A;
+    height: 92vh;
+    display: grid;
+    place-items: center center;
+    padding: 0px;
   }
 }

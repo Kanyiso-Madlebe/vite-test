@@ -81,7 +81,7 @@
     .about img {
       width: 100%;
       height: auto;
-      border-radius: 0;
+      border-radius: 12px;
       margin-right: 0;
       margin-bottom: 20px;
     }

@@ -15,13 +15,10 @@ const NavBar = () => {
       <a href="#" className="nav__brand">
         Kanyiso Madlebe
       </a>
-      <div
-        onClick={navToggle}
-        className={`nav__toggler ${toggleIcon ? 'toggle' : ''}`}
-      >
-        <div className={`line line1 ${toggleIcon ? 'open' : ''}`}></div>
-        <div className={`line line2 ${toggleIcon ? 'open' : ''}`}></div>
-        <div className={`line line3 ${toggleIcon ? 'open' : ''}`}></div>
+      <div onClick={navToggle} className={toggleIcon ? 'nav__toggler toggle' : 'nav__toggler'}>
+        <div className="line1"></div>
+        <div className="line2"></div>
+        <div className="line3"></div>
       </div>
       <ul className="nav__menu">
         <li className="nav__item">
