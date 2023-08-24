@@ -33,13 +33,14 @@ function Home() {
                         transition={{ duration: 1, delay: 1 }}
                         className="buttons-desktop"
                     >
-                        <motion.button
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                            className="button button1"
-                        >
-                            Resume
-                        </motion.button>
+                       <motion.button
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                                className="button button1"
+                            >
+                                <a href='src/components/Kanyiso Madlebe-Resume (1).pdf' target="_blank" rel="noopener noreferrer">Resume</a>
+                            </motion.button>
+
                         <motion.button
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}

@@ -1,9 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import '../style/about.css'; 
 import Young from '../images/young.png';
 
 const About = () => {
+  const [showMore, setShowMore] = useState(false);
+
   return (
     <section className="about" id="about">
       <div className="main">
@@ -16,9 +17,17 @@ const About = () => {
             Lrorem Ipsum has been the industry's standard dummy text ever since the 1500s,
             when an unknown printer took a galley of type and scrambled it to make a type specimen book.
           </p>
-          <Link to="/extended">
-            <button type="button">Read More</button>
-          </Link>
+          {showMore ? (
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem omnis
+               sunt soluta provident quibusdam voluptatem magni dolorum 
+              at dolor aspernatur, porro, eaque accusamus illo iusto deserunt 
+              distinctio possimus dignissimos quo.
+            </p>
+          ) : null}
+          <button type="button" onClick={() => setShowMore(!showMore)}>
+            {showMore ? "Show Less" : "Read More"}
+          </button>
         </div>
       </div>
     </section>
