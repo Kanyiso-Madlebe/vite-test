@@ -34,7 +34,6 @@
     font-size: 50px;
     text-transform: capitalize;
     margin-bottom: 20px;
-    margin-right: ;
   }
   
   .about-text h5 {
@@ -58,7 +57,7 @@
   }
   
   button {
-    background: #fff;
+    background: rgba(128, 128, 128, 0.692);
     color: #000;
     text-decoration: none;
     border: 2px solid transparent;

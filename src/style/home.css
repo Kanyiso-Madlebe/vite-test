@@ -135,15 +135,14 @@
   }
   .white-text{
     font-size: 30px;
-  }
-
+  } 
   .home-img-btn-container {
     width: 85%;
     margin-right: 0;
     margin-left: 0;
     text-align: center;
+    margin-top: 1vh; 
   }
-
   .buttons-desktop {
     position: absolute;
     bottom: -40%;

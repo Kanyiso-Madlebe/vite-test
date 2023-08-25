@@ -11,11 +11,15 @@ const About = () => {
           <h1>About Me</h1>
           <h5>Developer<span> & Analyst</span></h5>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lrorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          Hey there! I'm Kanyiso Madlebe, a tech enthusiast with an ICT and Business Analysis background. 
+          Currently interning in Software Development,
+           I'm passionate about translating ideas into impactful digital realities.
+           Let's connect and journey through the evolving landscape of coding and creativity.
           </p>
-          <button type="button">Read More</button>
+          
+          <button type="button"><a href="https://adorable-donut-35dd9f.netlify.app/" target="_blank" rel="noopener noreferrer">
+          Read More
+                        </a></button>
         </div>
       </div>
     </section>

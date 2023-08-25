@@ -165,24 +165,23 @@ li a hover {
         margin: 0;
     }
 
-    .nav__menu {
-        position: fixed;
-        top: 8vh;
-        right: 0;
-        width: 50%; 
-        height: 42vh; 
-        background: #1E3658;
-        flex-direction: column;
-        transform: translateX(100%);
-        transition: 0.5s ease-in;
-    }
+     .nav__menu {
+    position: fixed;
+    top: 8vh;
+    right: 0;
+    width: 50%;
+    height: 42vh;
+    background: #1E3658;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+    z-index: 1000;
+  }
 
-    /*-Activate nav class-*/
     .nav__active {
         transform: translateX(0);
     }
 
-    /* toggler  icn animation */
     .toggle .line1,
     .toggle .line3 {
         transform: rotate(-45deg) translate(-3px, 5px); /* Adjusted position */
@@ -191,11 +190,6 @@ li a hover {
     .toggle .line2 {
         opacity: 0;
     }
-}
-
-
-/* Media query for responsive menu */
-@media screen and (max-width: 768px) {
    
     /* Adjusted toggle bar styles */
     .nav__toggler .line1,
@@ -228,9 +222,9 @@ li a hover {
     opacity: 1;
 }
 
-/* Adjust for hover effect on toggler lines */
+/* Adjust for hover effect */
 .nav__toggler .line1:hover,
 .nav__toggler .line2:hover,
 .nav__toggler .line3:hover {
-    background-color: #000; /* Change background on hover */
+    background-color: #000; 
 }

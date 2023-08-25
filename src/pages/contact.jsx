@@ -1,8 +1,7 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import '../style/contact.css';
 
 function Contact() {
-    const recaptchaRef = useRef(null);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
@@ -10,14 +9,6 @@ function Contact() {
     const [nameError, setNameError] = useState('');
     const [emailError, setEmailError] = useState('');
     const [phoneError, setPhoneError] = useState('');
-
-    useEffect(() => {
-        const script = document.createElement('script');
-        script.src = 'https://www.google.com/recaptcha/enterprise.js?render=6Lfw7sonAAAAAOm9TZB2-8fSOK4w8sIwnRVJ4abQ';
-        script.async = true;
-        script.defer = true;
-        document.head.appendChild(script);
-    }, []);
 
     const validateForm = () => {
         let isValid = true;
@@ -48,25 +39,17 @@ function Contact() {
         return isValid;
     };
 
-    const handleFormSubmit = async (event) => {
+    const handleFormSubmit = (event) => {
         event.preventDefault();
 
-        const recaptchaValue = recaptchaRef.current.getValue();
-        if (recaptchaValue && validateForm()) {
-            try {
-                const token = await grecaptcha.enterprise.execute('6Lfw7sonAAAAAOm9TZB2-8fSOK4w8sIwnRVJ4abQ', { action: 'CONTACT_FORM' });
-                // Send form data and reCAPTCHA token to server for processing
-                const formData = {
-                    name,
-                    email,
-                    phone,
-                    message,
-                    recaptchaValue
-                };
-                console.log(formData); // You can send this data to your server using fetch or any other method
-            } catch (error) {
-                console.error('reCAPTCHA execution failed:', error);
-            }
+        if (validateForm()) {
+            const formData = {
+                name,
+                email,
+                phone,
+                message
+            };
+            console.log(formData); // You can send this data to your server using fetch or any other method
         }
     };
 
@@ -88,7 +71,6 @@ function Contact() {
                     <input type="text" id="phone" placeholder="Phone number" value={phone} onChange={(e) => setPhone(e.target.value)} required />
                     <span id="phoneError" className="error">{phoneError}</span>
                     <textarea id="message" rows="4" placeholder="How can we help you?" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
-                    <div className="g-recaptcha" data-sitekey="YOUR_NEW_SITE_KEY" ref={recaptchaRef}></div>
                     <button type="submit">Submit</button>
                 </form>
             </div>
