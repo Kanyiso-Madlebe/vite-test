@@ -60,6 +60,7 @@ img{
   .cards {
       grid-template-columns: 1fr; 
       background: #3A547A;
+      
   }
 
   .card {
@@ -67,7 +68,7 @@ img{
       
   }
   .projects {
-    margin-bottom: 840px;
+    margin-bottom: 940px;
     background: #3A547A;
     height: 92vh;
     display: grid;
