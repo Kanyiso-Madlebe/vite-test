@@ -26,7 +26,7 @@ function Home() {
                         A Business Analysis graduate now 
                         delving into the world of Software Development through
                          an internship.
-                    </motion.h3>
+                    </motion.h3>   
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
