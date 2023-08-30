@@ -17,7 +17,7 @@ function Home() {
                     className="home-text"
                 >
                     <motion.h3 className="software-title">
-                        <span className="white-text">Software </span>
+                         <span className="white-text">Software </span>
                         <span className="red-text">Dev:</span>
                         <span className="white-text"> Business </span>
                         <span className="red-text">Analyst</span>
