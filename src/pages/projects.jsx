@@ -12,7 +12,7 @@ function Projects() {
       </div>
       <div className="cards">
         {/* Card 1 */}
-        <div className="card card1">
+        <div className="card card1 card-enter-animation">
           <div className="container">
           <a href="https://super-quokka-c5659f.netlify.app/">
               <img src={MzamomtshaImage} alt="Mzamomtsha" />
@@ -27,7 +27,7 @@ function Projects() {
         </div>
 
         {/* Card 2 */}
-        <div className="card card2">
+        <div className="card card2 card-enter-animation">
           <div className="container">
           <a href="https://github.com/Kanyiso-Madlebe/Squad-converters">
               <img src={FinancialCalculatorImage} alt="Financial Calculator" />
@@ -42,7 +42,7 @@ function Projects() {
         </div>
 
         {/* Card 3 */}
-        <div className="card card3">
+        <div className="card card3 card-enter-animation">
           <div className="container">
           <a href="https://github.com/Kanyiso-Madlebe/Tax-Calculator">
               <img src={TaxCalculatorImage} alt="Tax Calculator" />

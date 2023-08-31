@@ -15,9 +15,9 @@
   
 }
 .card{
- background-color: #fff;
+ background-color: #c5a5a588;
  border-radius: 20px;
- box-shadow: 0 0 30px #000000;
+ box-shadow: 0 0 30px #ffffffab;
 }
 .container{
     position:relative;
@@ -33,7 +33,7 @@ img{
 .details {
     padding: 20px;
     box-sizing: border-box;
-    color: #000;
+    color: #000000;
 }
 
 .details h1 {
@@ -74,5 +74,19 @@ img{
     display: grid;
     place-items: center center;
     padding: 0px;
+  }
+}
+.card-enter-animation {
+  animation: slide-in 0.5s ease forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

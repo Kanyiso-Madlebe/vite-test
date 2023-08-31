@@ -141,15 +141,15 @@
     margin-right: 0;
     margin-left: 0;
     text-align: center;
-    margin-top: 1vh; 
+    margin-top: -11vh; 
   }
   .buttons-desktop {
     position: absolute;
-    bottom: -40%;
+    bottom: -20%;
     left: 80px;
   }
   .home {
-    height: 112vh;
+    height: 100vh;
     background: rgba(58, 84, 122, 0.98);
   }
   .wallpaper {
