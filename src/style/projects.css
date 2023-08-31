@@ -15,9 +15,9 @@
   
 }
 .card{
- background-color: #c5a5a588;
+ background-color: rgba(128, 128, 128, 0.753);
  border-radius: 20px;
- box-shadow: 0 0 30px #ffffffab;
+ box-shadow: 0 0 30px #ffffff41;
 }
 .container{
     position:relative;
@@ -33,7 +33,7 @@ img{
 .details {
     padding: 20px;
     box-sizing: border-box;
-    color: #000000;
+    color: #ffffffb4;
 }
 
 .details h1 {
@@ -89,4 +89,14 @@ img{
     opacity: 1;
     transform: translateX(0);
   }
+}
+.card {
+  /* ... existing card styles ... */
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.flipped {
+  transform: rotateY(180deg);
 }
