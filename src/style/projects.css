@@ -1,5 +1,5 @@
 .projects{
-    background: #0c1e3a;
+    background: #0c1e3aee;
     height: 100vh;
     display: grid;
     place-items: center center;
@@ -15,7 +15,7 @@
   
 }
 .card{
- background-color: rgba(128, 128, 128, 0.753);
+ background-color: rgba(182, 182, 182, 0.753);
  border-radius: 20px;
  box-shadow: 0 0 30px #ffffff41;
 }
