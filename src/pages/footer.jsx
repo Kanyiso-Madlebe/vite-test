@@ -10,7 +10,17 @@ function Footer() {
 
   return (
     <div className="footerContainer">
-      {/* ... (social icons code) */}
+    <div className="socialIcons">
+      <a href="https://github.com/Kanyiso-Madlebe" target="_blank" rel="noopener noreferrer">
+       <i className="fab fa-github"></i>
+       </a>
+       <a href="https://www.linkedin.com/in/kanyiso-madlebe-960670254/" target="_blank" rel="noopener noreferrer">
+       <i className="fab fa-linkedin"></i>
+      </a>
+    <a href="https://www.instagram.com/kanyiso_madlebe/" target="_blank" rel="noopener noreferrer">
+      <i className="fab fa-instagram"></i>
+    </a>
+      </div>
       <div className="footerNav">
         <ul>
           <li>
