@@ -15,7 +15,7 @@
   
 }
 .card{
- background-color: rgba(182, 182, 182, 0.753);
+ background-color: rgba(199, 174, 174, 0.753);
  border-radius: 20px;
  box-shadow: 0 0 30px #ffffff41;
 }
@@ -33,7 +33,7 @@ img{
 .details {
     padding: 20px;
     box-sizing: border-box;
-    color: #ffffffb4;
+    color: #000;
 }
 
 .details h1 {

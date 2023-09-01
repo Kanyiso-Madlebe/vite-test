@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com'; // Updated import
 import '../style/contact.css';
 
 function Contact() {
@@ -43,13 +44,18 @@ function Contact() {
         event.preventDefault();
 
         if (validateForm()) {
-            const formData = {
-                name,
-                email,
-                phone,
-                message
-            };
-            console.log(formData); // You can send this data to your server using fetch or any other method
+            emailjs
+                .sendForm('service_i1ym6bi', 'template_1ud1lrl', event.target, 'JKTLXejG5gWOgOS3b')
+                .then(
+                    (result) => {
+                        console.log('EmailJS Success:', result.text);
+                        console.log('Message sent');
+                    },
+                    (error) => {
+                        console.error('EmailJS Error:', error);
+                        console.log(error.text);
+                    }
+                );
         }
     };
 
@@ -64,13 +70,40 @@ function Contact() {
             <div className="contact" id="contact">
                 <form onSubmit={handleFormSubmit}>
                     <h3>Having any queries? Contact Me:</h3>
-                    <input type="text" id="name" placeholder="Full Name" value={name} onChange={(e) => setName(e.target.value)} required />
-                    <span id="nameError" className="error">{nameError}</span>
-                    <input type="email" id="email" placeholder="name@mail.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
-                    <span id="emailError" className="error">{emailError}</span>
-                    <input type="text" id="phone" placeholder="Phone number" value={phone} onChange={(e) => setPhone(e.target.value)} required />
-                    <span id="phoneError" className="error">{phoneError}</span>
-                    <textarea id="message" rows="4" placeholder="How can we help you?" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+                    <input
+                        type="text"
+                        id="user_name"
+                        placeholder="Full Name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        required
+                    />
+                    <span className="error">{nameError}</span>
+                    <input
+                        type="email"
+                        id="user_email"
+                        placeholder="name@mail.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                    <span className="error">{emailError}</span>
+                    <input
+                        type="text"
+                        id="user_phone"
+                        placeholder="Phone number"
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        required
+                    />
+                    <span className="error">{phoneError}</span>
+                    <textarea
+                        id="message"
+                        rows="4"
+                        placeholder="How can we help you?"
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                    ></textarea>
                     <button type="submit">Submit</button>
                 </form>
             </div>
