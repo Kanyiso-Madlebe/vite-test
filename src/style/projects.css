@@ -56,7 +56,7 @@ img{
   text-decoration: none; /* Optional: Remove the underline */
 }
 /* Responsive adjustments for small screens */
-@media screen and (min-width: 300px) and (max-width: 900px) {
+@media screen and (max-width: 768px) {
   .cards {
       grid-template-columns: 1fr; 
       background: #3A547A;
@@ -70,7 +70,7 @@ img{
   .projects {
     margin-bottom: 940px;
     background: #3A547A;
-    height: 52vh;
+    height: 57vh;
     display: grid;
     place-items: center center;
     padding: 0px;
@@ -89,4 +89,14 @@ img{
     opacity: 1;
     transform: translateX(0);
   }
+}
+.card {
+  /* ... existing card styles ... */
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.flipped {
+  transform: rotateY(180deg);
 }
