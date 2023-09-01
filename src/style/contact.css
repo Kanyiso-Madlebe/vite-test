@@ -71,3 +71,15 @@ form button {
         font-size: 14px; /* Adjust font size for smaller screens */
     }
 }
+.confirmation-message {
+    background: #4caf4fc2; 
+    color: white; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    position: absolute; 
+    bottom: 40px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 100; 
+  }
+  

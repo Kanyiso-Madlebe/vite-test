@@ -14,11 +14,22 @@
   grid-gap:40px;
   
 }
-.card{
- background-color: rgba(199, 174, 174, 0.753);
- border-radius: 20px;
- box-shadow: 0 0 30px #ffffff41;
+.card {
+  background-color: rgba(199, 174, 174, 0.336);
+  border-radius: 20px;
+  box-shadow: 0 0 30px #ffffff41;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  cursor: pointer;
 }
+
+.card:hover {
+  transform: scale(1.05); /* card size */
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+  box-shadow: 0 0 40px rgba(199, 174, 174, 0.5); 
+  background-color: #ffffff9d; 
+}
+
 .container{
     position:relative;
     clip-path: polygon(0 0,100% 0, 100%
@@ -29,6 +40,7 @@ img{
   display: block;
   border-radius: 20px 20px 0 0;
 }
+
 
 .details {
     padding: 20px;
