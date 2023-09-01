@@ -123,10 +123,10 @@
     margin-right: 40px;
   }
   .red-text{
-    font-size: 35px;
+    font-size: 25px;
   }
   .white-text{
-    font-size: 30px;
+    font-size: 25px;
   } 
   .home-img-btn-container {
     width: 85%;
@@ -152,3 +152,4 @@
 .buttons-desktop{
   display: flex;
 }
+
