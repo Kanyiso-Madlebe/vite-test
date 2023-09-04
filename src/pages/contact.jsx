@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com'; // Updated import
+import emailjs from 'emailjs-com';
 import '../style/contact.css';
 
 function Contact() {
@@ -43,24 +43,33 @@ function Contact() {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-
+  
     if (validateForm()) {
+      const formData = {
+        to_name: 'Recipient Name', // Replace with the recipient's name
+        from_name: 'Your Name',    // Replace with your name
+        name: name,
+        email: email,
+        phone: phone,
+        message: message,
+      };
+  
       emailjs
-        .sendForm('service_i1ym6bi', 'template_1ud1lrl', event.target, 'JKTLXejG5gWOgOS3b')
+        .sendForm('service_418kf8u', 'template_f1av4bc', event.target, 'f4Du8qRs57A9YQRWG')
         .then(
           (result) => {
             console.log('EmailJS Success:', result.text);
             console.log('Message sent');
-
+  
             // Clear the form fields after successful submission
             setName('');
             setEmail('');
             setPhone('');
             setMessage('');
-
+  
             // Show the confirmation message
             setShowConfirmation(true);
-
+  
             // Hide the confirmation message after a few seconds (optional)
             setTimeout(() => {
               setShowConfirmation(false);
@@ -73,7 +82,8 @@ function Contact() {
         );
     }
   };
-
+  
+        
   const isValidEmail = (email) => {
     // Basic email validation (you can use a library for more robust validation)
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -104,7 +114,7 @@ function Contact() {
           />
           <span className="error">{emailError}</span>
           <input
-            type="text"
+            type="number"
             id="user_phone"
             placeholder="Phone number"
             value={phone}
