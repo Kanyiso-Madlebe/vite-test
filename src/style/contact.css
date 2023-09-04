@@ -48,6 +48,11 @@ form button {
     width: 100px;
     margin: 20px auto 0;
     border-radius: 30px;
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+}
+
+form button:hover {
+    background-color: #b95c5c98;
 }
 
 /* Responsive adjustments for small screens */
@@ -55,20 +60,20 @@ form button {
     .contact {
         width: 100%;
         background: #1E3658;
-        padding: 10px; /* Adjust padding for smaller screens */
+        padding: 10px;   
         position: relative;
     }
 
     form {
-        padding: 2vw; /* Adjust padding for smaller screens */
-        width: 100%; /* Take full width on small screens */
-        max-width: none; /* Reset max-width */
+        padding: 2vw; 
+        width: 100%;
+        max-width: none;
     }
 
     form input,
     form textarea {
-        padding: 10px; /* Adjust padding for smaller screens */
-        font-size: 14px; /* Adjust font size for smaller screens */
+        padding: 10px; 
+        font-size: 14px; 
     }
 }
 .confirmation-message {

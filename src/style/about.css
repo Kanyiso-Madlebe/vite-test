@@ -32,7 +32,7 @@
 }
 
 .about-text h1 {
-  color: black;
+  color: #900707cc;
   font-size: 50px;
   text-transform: capitalize;
   margin-bottom: 20px;
@@ -68,6 +68,16 @@ button {
   border-radius: 20px;
   transition: 0.4s;
 }
+
+button:hover {
+  background-color: #ffffff62 !important;
+  border: 2px solid #F5DCDC !important;
+  cursor: pointer;
+}
+
+
+/* Rest of your CSS code */
+
 
 button:hover {
   background: transparent;

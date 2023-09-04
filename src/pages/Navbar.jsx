@@ -4,7 +4,7 @@ import '../style/Navbar.css';
 const NavBar = () => {
   const [active, setActive] = useState(false);
   const [toggleIcon, setToggleIcon] = useState(false);
-  const [currentPage, setCurrentPage] = useState('Home'); // Initialize with the default active page (e.g., 'Home')
+  const [currentPage, setCurrentPage] = useState('Home'); // Initialize with the default active page 
 
   const navToggle = () => {
     setActive(!active);
