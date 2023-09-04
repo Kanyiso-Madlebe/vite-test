@@ -4,10 +4,17 @@ import '../style/Navbar.css';
 const NavBar = () => {
   const [active, setActive] = useState(false);
   const [toggleIcon, setToggleIcon] = useState(false);
+  const [currentPage, setCurrentPage] = useState('Home'); // Initialize with the default active page (e.g., 'Home')
 
   const navToggle = () => {
     setActive(!active);
     setToggleIcon(!toggleIcon);
+  };
+
+  const handleNavLinkClick = (page) => {
+    setCurrentPage(page);
+    setActive(false); // Close the navigation menu when a link is clicked
+    setToggleIcon(false);
   };
 
   return (
@@ -22,22 +29,38 @@ const NavBar = () => {
       </div>
       <ul className="nav__menu">
         <li className="nav__item">
-          <a href="#home" className="nav__link">
+          <a
+            href="#home"
+            className={`nav__link ${currentPage === 'Home' ? 'active' : ''}`}
+            onClick={() => handleNavLinkClick('Home')}
+          >
             Home
           </a>
         </li>
         <li className="nav__item">
-          <a href="#about" className="nav__link">
+          <a
+            href="#about"
+            className={`nav__link ${currentPage === 'About' ? 'active' : ''}`}
+            onClick={() => handleNavLinkClick('About')}
+          >
             About
           </a>
         </li>
         <li className="nav__item">
-          <a href="#projects" className="nav__link">
+          <a
+            href="#projects"
+            className={`nav__link ${currentPage === 'Projects' ? 'active' : ''}`}
+            onClick={() => handleNavLinkClick('Projects')}
+          >
             Projects
           </a>
         </li>
         <li className="nav__item">
-          <a href="#contact" className="nav__link">
+          <a
+            href="#contact"
+            className={`nav__link ${currentPage === 'Contact' ? 'active' : ''}`}
+            onClick={() => handleNavLinkClick('Contact')}
+          >
             Contact
           </a>
         </li>

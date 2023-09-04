@@ -15,9 +15,9 @@
   
 }
 .card {
-  background-color: rgba(199, 174, 174, 0.336);
+  background-color: #ffffff62;
   border-radius: 20px;
-  box-shadow: 0 0 30px #ffffff41;
+  box-shadow: 0 0 30px rgba(199, 174, 174, 0.336);
   transform-style: preserve-3d;
   transition: transform 0.5s;
   cursor: pointer;

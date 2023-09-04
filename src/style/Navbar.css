@@ -47,6 +47,12 @@ a {
     justify-content: space-around;
     gap: 3rem;
 }
+/* Style the active nav-link differently */
+.nav__menu a.active {
+    color: #ca7d7d; 
+    font-weight: bold; 
+}
+
 
 .nav__toggler div {
     width: 2.5rem;
