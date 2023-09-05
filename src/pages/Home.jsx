@@ -38,7 +38,7 @@ function Home() {
                                 whileTap={{ scale: 0.9 }}
                                 className="button button1"
                             >
-                                <a href='src/components/Kanyiso Madlebe-Resume (1).pdf' target="_blank" rel="noopener noreferrer">Resume</a>
+                                <a href='src/components/Kanyiso Madlebe-Resume.pdf' target="_blank" rel="noopener noreferrer">Resume</a>
                             </motion.button>
 
                             <motion.button

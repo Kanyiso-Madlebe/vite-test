@@ -83,7 +83,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin: 0; /* Reset margin for spans */
+    margin: 0; 
 }
   
  /*style for the buttons */
@@ -123,10 +123,10 @@
     margin-right: 40px;
   }
   .red-text{
-    font-size: 25px;
+    font-size: 23px;
   }
   .white-text{
-    font-size: 25px;
+    font-size: 23px;
   } 
   .home-img-btn-container {
     width: 85%;
@@ -137,10 +137,10 @@
   }
   .buttons-desktop {
     position: absolute;
-    bottom: -20%;
+    bottom: 0;
   }
   .home {
-    height: 100vh;
+    height: 80vh;
     background: rgba(58, 84, 122, 0.98);
   }
   .wallpaper {
