@@ -63,7 +63,7 @@
   
   button[type="submit"] {
     padding: 15px;
-    background: #a0c4c2;
+    background: #accfceb4;
     color: #000;
     font-size: 18px;
     border: 0;
@@ -81,10 +81,10 @@
   
   .confirmation-message {
     background: #4caf4f8a;
-    color: black;
+    color: white;
     padding: 10px 20px;
     border-radius: 5px;
-    position: absolute;
+    position: fixed;
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
