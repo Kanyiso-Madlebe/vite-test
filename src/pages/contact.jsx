@@ -102,6 +102,7 @@ function Contact() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
+            autoComplete="off" 
           />
           <span className="error">{nameError}</span>
           <input
@@ -111,6 +112,7 @@ function Contact() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            autoComplete="off" 
           />
           <span className="error">{emailError}</span>
           <input
@@ -120,6 +122,7 @@ function Contact() {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             required
+            autoComplete="off" 
           />
           <span className="error">{phoneError}</span>
           <textarea

@@ -137,7 +137,8 @@
   }
   .buttons-desktop {
     position: absolute;
-    bottom: 0;
+    bottom: -12px;
+    margin-left: 24px;
   }
   .home {
     height: 80vh;
