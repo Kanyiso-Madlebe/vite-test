@@ -135,7 +135,7 @@ button:hover {
 /* Extra small devices */
 @media (max-width: 480px) {
   .about {
-    /* Add your styles for extra small devices here */
+
     padding: 40px 0;
   }
 

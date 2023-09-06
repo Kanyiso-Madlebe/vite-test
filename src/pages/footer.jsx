@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../style/footer.css';
 
 function Footer() {
-  const [activeLink, setActiveLink] = useState('home'); // Initialize with the default active link
+  const [activeLink, setActiveLink] = useState('home'); 
 
   const handleLinkClick = (link) => {
     setActiveLink(link);

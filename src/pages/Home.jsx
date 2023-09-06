@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 import '../style/home.css';
 import Coco from '../images/coco.jpeg';
 import Wall from '../images/wallpaper.jpg';
-import CV from '../components/resume.pdf'
+import CV from '../components/resume.pdf';
 
 function Home() {
     return (
         <div className="content">
         <section className="home" id="home">
-        <div className="wallpaper" style={{ backgroundImage: `url(${Wall})` }}>
+        <div className="wallpaper" style={{ backgroundImage: `url(${Wall})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center center' }}>
             <div className="home-data">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}

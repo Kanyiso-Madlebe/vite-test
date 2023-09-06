@@ -25,24 +25,7 @@ function Projects() {
       link: 'https://github.com/Kanyiso-Madlebe/Tax-Calculator',
       image: TaxCalculatorImage,
     },
-    {
-      title: 'Financial Calculator',
-      description: 'Empowering individuals to make informed financial decisions, we developed a comprehensive calculator tool that visualizes various scenarios, from investments to loans, promoting financial literacy and planning.',
-      link: 'https://github.com/Kanyiso-Madlebe/Squad-converters',
-      image: FinancialCalculatorImage,
-    },
-    {
-      title: 'Tax Calculator',
-      description: 'Through a user-friendly tax calculator app, we simplified the complexity of taxes by allowing users to input financial data and receive accurate tax estimates.',
-      link: 'https://github.com/Kanyiso-Madlebe/Tax-Calculator',
-      image: TaxCalculatorImage,
-    },
-    {
-      title: 'Mzamomtsha',
-      description: 'We transformed school website by designing from scratch its interface and functionality, ensuring an intuitive and engaging user experience for students, parents, and faculty.',
-      link: 'https://super-quokka-c5659f.netlify.app/',
-      image: MzamomtshaImage,
-    },
+  
   ];
 
   // State to keep track of the currently visible projects

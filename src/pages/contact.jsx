@@ -88,7 +88,7 @@ function Contact() {
   };
 
   const isValidEmail = (email) => {
-    // Basic email validation (you can use a library for more robust validation)
+    //email validation 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
   };
