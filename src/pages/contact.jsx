@@ -19,6 +19,9 @@ function Contact() {
     if (!name) {
       setNameError('Please enter your name');
       isValid = false;
+    } else if (!/^[A-Z][a-zA-Z\s]*$/.test(name)) {
+      setNameError('Name must start with a capital letter and contain letters and spaces only');
+      isValid = false;
     } else {
       setNameError('');
     }
@@ -33,6 +36,9 @@ function Contact() {
     }
     if (!phone) {
       setPhoneError('Please enter your phone number');
+      isValid = false;
+    } else if (!/^\d{10}$/.test(phone)) {
+      setPhoneError('Phone number must be 10 digits');
       isValid = false;
     } else {
       setPhoneError('');

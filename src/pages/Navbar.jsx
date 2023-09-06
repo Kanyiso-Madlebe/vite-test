@@ -19,7 +19,7 @@ const NavBar = () => {
 
   return (
     <nav className={`nav ${active ? 'nav__active' : ''}`}>
-      <a href="src/components/resume.pdf" className="nav__brand">
+      <a href="#" className="nav__brand">
         Kanyiso Madlebe
       </a>
       <div onClick={navToggle} className={toggleIcon ? 'nav__toggler toggle' : 'nav__toggler'}>

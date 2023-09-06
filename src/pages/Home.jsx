@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import '../style/home.css';
 import Coco from '../images/coco.jpeg';
 import Wall from '../images/wallpaper.jpg';
+import CV from '../components/resume.pdf'
 
 function Home() {
     return (
@@ -38,7 +39,7 @@ function Home() {
                                 whileTap={{ scale: 0.9 }}
                                 className="button button1"
                             >
-                                <a href='https://www.canva.com/design/DAFjdPK3FH4/ISJbH-KNRwLL6_UgrbVMUw/watch?utm_content=DAFjdPK3FH4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink' target="_blank" rel="noopener noreferrer">Resume</a>
+                                <a href={CV} target="_blank" rel="noopener noreferrer">Resume</a>
                             </motion.button>
 
                             <motion.button
