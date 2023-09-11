@@ -136,10 +136,10 @@
     margin-top: -11vh; 
   }
   .buttons-desktop {
-    position: absolute;
-    bottom: -26px;
+    position: relative;
     margin-left: 24px;
   }
+ 
   .home {
     height: 100vh;
     background: rgba(58, 84, 122, 0.98);
