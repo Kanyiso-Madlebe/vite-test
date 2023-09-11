@@ -77,11 +77,12 @@ img {
 
   .card {
     margin: 0px auto;
+    height: auto;
   }
 
   .projects {
     background: #3a547a;
-    height: 220vh; /* Set height to cover the entire viewport */
+    height: 280vh; /* Set height to cover the entire viewport */
     display: grid;
     place-items: center center;
     padding: 0px;
