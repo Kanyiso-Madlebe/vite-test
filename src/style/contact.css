@@ -90,6 +90,9 @@
     transform: translateX(-50%);
     z-index: 100;
   }
+  .g-recaptcha{
+    margin: 10px 20px;
+  }
   
   /* Responsive adjustments for small screens */
   @media screen and (max-width: 768px) {

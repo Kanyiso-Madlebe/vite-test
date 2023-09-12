@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import ReCAPTCHA from 'react-google-recaptcha'; // Import the reCAPTCHA component
 import '../style/contact.css';
 
 function Contact() {
@@ -11,6 +12,7 @@ function Contact() {
   const [emailError, setEmailError] = useState('');
   const [phoneError, setPhoneError] = useState('');
   const [showConfirmation, setShowConfirmation] = useState(false); // State for the confirmation message
+  const [recaptchaValue, setRecaptchaValue] = useState(null); // State to store reCAPTCHA value
 
   const validateForm = () => {
     let isValid = true;
@@ -47,10 +49,15 @@ function Contact() {
     return isValid;
   };
 
+  const handleRecaptchaChange = (value) => {
+    // Callback function when reCAPTCHA value changes
+    setRecaptchaValue(value);
+  };
+
   const handleFormSubmit = (event) => {
     event.preventDefault();
 
-    if (validateForm()) {
+    if (validateForm() && recaptchaValue) {
       const formData = {
         to_name: 'Recipient Name',
         from_name: 'Your Name',
@@ -78,17 +85,23 @@ function Contact() {
             setTimeout(() => {
               setShowConfirmation(false);
             }, 5000); // Adjust the time as needed
+
+            // Clear the reCAPTCHA value after submission
+            setRecaptchaValue(null);
           },
           (error) => {
             console.error('EmailJS Error:', error);
             console.log(error.text);
           }
         );
+    } else {
+      // Show an error message for reCAPTCHA
+      console.error('Please complete the reCAPTCHA');
     }
   };
 
   const isValidEmail = (email) => {
-    //email validation 
+    // Email validation
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
   };
@@ -147,7 +160,13 @@ function Contact() {
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
           </div>
-
+          <div className="field">
+            <ReCAPTCHA
+              sitekey="6LfqMhgoAAAAAPXXssF_yhRaOBLWnmqjzqUhKznu"
+              onChange={handleRecaptchaChange}
+            />
+            {recaptchaValue === null && <span className="error">Please complete the reCAPTCHA</span>}
+          </div>
           <button type="submit">Submit</button>
         </form>
         {/* Confirmation message */}
