@@ -4,7 +4,6 @@
   padding: 78px 0px;
   background: #1E3658;
   height: 100vh;
-  
 }
 
 .about img {
@@ -73,16 +72,6 @@ button:hover {
   cursor: pointer;
 }
 
-
-/* Rest of your CSS code */
-
-
-button:hover {
-  background: transparent;
-  border: 2px solid #F5DCDC;
-  cursor: pointer;
-}
-
 /* Responsive adjustments */
 
 /* Medium screens */
@@ -104,6 +93,9 @@ button:hover {
   .main {
     flex-direction: column;
     align-items: center;
+  }
+  .about{
+    width: 100%;
   }
 }
 
@@ -135,12 +127,11 @@ button:hover {
 /* Extra small devices */
 @media (max-width: 480px) {
   .about {
-
     padding: 40px 0;
+    width: 100%;
   }
 
   .about img {
-    /* Adjustments for extra small devices */
     width: 100%;
     height: auto;
     border-radius: 8px;
@@ -149,30 +140,25 @@ button:hover {
   }
 
   .about-text {
-    /* Adjustments for extra small devices */
     width: 100%;
     margin-left: 0;
     text-align: center;
   }
 
   .about-text h1 {
-    /* Adjustments for extra small devices */
     font-size: 28px;
   }
 
   .about-text h5 {
-    /* Adjustments for extra small devices */
     font-size: 18px;
   }
 
   .about-text p {
-    /* Adjustments for extra small devices */
     font-size: 14px;
     margin-bottom: 30px;
   }
 
   button {
-    /* Adjustments for extra small devices */
     font-size: 12px;
     padding: 8px 16px;
   }
@@ -180,124 +166,30 @@ button:hover {
 
 /* Small tablets */
 @media (min-width: 481px) and (max-width: 767px) {
-  .about {
-    /* Add your styles for small tablets here */
-  }
-
-  .about img {
-    /* Adjustments for small tablets */
-  }
-
-  .about-text {
-    /* Adjustments for small tablets */
-  }
-
-  .about-text h1 {
-    /* Adjustments for small tablets */
-  }
-
-  .about-text h5 {
-    /* Adjustments for small tablets */
-  }
-
-  .about-text p {
-    /* Adjustments for small tablets */
-  }
-
-  button {
-    /* Adjustments for small tablets */
+  .about{
+    width: 100%;
   }
 }
 
 /* Large tablets/laptops */
 @media (min-width: 768px) and (max-width: 991px) {
-  .about {
-    /* Add your styles for large tablets/laptops here */
+  .about{
+    width: 100%;
   }
 
-  .about img {
-    /* Adjustments for large tablets/laptops */
-  }
-
-  .about-text {
-    /* Adjustments for large tablets/laptops */
-  }
-
-  .about-text h1 {
-    /* Adjustments for large tablets/laptops */
-  }
-
-  .about-text h5 {
-    /* Adjustments for large tablets/laptops */
-  }
-
-  .about-text p {
-    /* Adjustments for large tablets/laptops */
-  }
-
-  button {
-    /* Adjustments for large tablets/laptops */
-  }
 }
 
 /* Desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
-  .about {
-    /* Add your styles for desktops here */
-  }
-
-  .about img {
-    /* Adjustments for desktops */
-  }
-
-  .about-text {
-    /* Adjustments for desktops */
-  }
-
-  .about-text h1 {
-    /* Adjustments for desktops */
-  }
-
-  .about-text h5 {
-    /* Adjustments for desktops */
-  }
-
-  .about-text p {
-    /* Adjustments for desktops */
-  }
-
-  button {
-    /* Adjustments for desktops */
+  .about{
+    width: 100%;
+    height: 100vh;
   }
 }
 
 /* Larger desktops */
 @media (min-width: 1200px) and (max-width: 1919px) {
-  .about {
-    /* Add your styles for larger desktops here */
-  }
-
-  .about img {
-    /* Adjustments for larger desktops */
-  }
-
-  .about-text {
-    /* Adjustments for larger desktops */
-  }
-
-  .about-text h1 {
-    /* Adjustments for larger desktops */
-  }
-
-  .about-text h5 {
-    /* Adjustments for larger desktops */
-  }
-
-  .about-text p {
-    /* Adjustments for larger desktops */
-  }
-
-  button {
-    /* Adjustments for larger desktops */
+  .about{
+    width: 100%;
   }
 }

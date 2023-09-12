@@ -1,93 +1,90 @@
 .home {
-    height: 100vh;
-    
-  }
-  
-  .wallpaper {
-    height:100vh;
-  }
- /* Adjust layout for larger screens */
+  height: 100vh;
+}
+
+.wallpaper {
+  height: 100vh;
+}
+
+/* Adjust layout for larger screens */
 .home-data {
   display: flex;
   align-items: center;
 }
 
 .home-text {
-  width: 50%; 
+  width: 50%;
   padding-left: 40px;
   padding-bottom: 70px;
 }
 
 .home-img-btn-container {
-  width: 40%; 
+  width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 20vh;
 }
-  
-  
-  .intro-text {
-    /* width: 654px; */
-    height: 157px;
-    flex-shrink: 0;
-    color: #fff;
-    font-family: Poppins;
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin: 0; /* Reset margin */
-    margin-top: 2vh;
+
+.intro-text {
+  height: 157px;
+  flex-shrink: 0;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+  margin-top: 2vh;
 }
-  /* Style for the image container */
-  .home-img-btn-container {
+
+/* Style for the image container */
+.home-img-btn-container {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem; /* Adjust the padding as needed */
   margin-left: 23px;
-  margin-top:10vh;
-  }
-  
-  /* Style for the image itself */
-  .home-image {
+  margin-top: 10vh;
+}
+
+/* Style for the image itself */
+.home-image {
   max-width: 100%;
   height: auto;
   border-radius: 20px 125px 13px 20px;
-  /* margin-left: 115px; */
   padding-top: 40px;
-  }
-  .software-title {
-    /* width: 652px; */
-    height: 141px;
-    flex-shrink: 0;
-    display: flex; 
-    align-items: center; 
-    margin-top: 12vh;
+}
+
+.software-title {
+  height: 141px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  margin-top: 12vh;
 }
 
 .white-text {
-    color: #fff;
-    font-family: Poppins;
-    font-size: 5rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .red-text {
-    color: #900707;
-    font-family: Poppins;
-    font-size: 53px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin: 0; 
+  color: #900707;
+  font-family: Poppins;
+  font-size: 53px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
 }
-  
- /*style for the buttons */
 
+/* Style for the buttons */
 .button1 {
   background: rgba(128, 128, 128, 0.562);
   color: #fff;
@@ -103,54 +100,69 @@
   margin-top: 20px;
   width: 15vh;
   height: 6vh;
-} 
-.button{
+}
+
+.button {
   margin-left: 1vh;
 }
-  
- /* Media query for smaller screen sizes */
+
+/* Media query for smaller screen sizes */
 @media (max-width: 768px) {
   .home-data {
     flex-direction: column;
     align-items: center;
   }
+
   .content {
     margin-bottom: 220px;
+    width: 100%;
   }
+
   .home-text {
     width: fit-content;
     text-align: center;
-    margin-right: 40px;
+    margin-right: 0;
+    padding: 20px;
   }
-  .red-text{
+
+  .red-text {
     font-size: 23px;
   }
-  .white-text{
+
+  .white-text {
     font-size: 23px;
-  } 
+  }
+
   .home-img-btn-container {
     width: 85%;
     margin-right: 0;
     margin-left: 0;
     text-align: center;
-    margin-top: -11vh; 
+    margin-top: -11vh;
   }
+
   .buttons-desktop {
     position: relative;
-    margin-left: 24px;
+    margin-left: 0;
   }
- 
+
   .home {
     height: 100vh;
+    width: 100%;
     background: rgba(58, 84, 122, 0.98);
   }
+
   .wallpaper {
-    height:300vh;
+    height: 300vh;
   }
-
 }
-
-.buttons-desktop{
+.buttons-desktop {
   display: flex;
 }
-
+/* Desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .content{
+    width: 100%;
+    height: 50vh;
+  }
+}

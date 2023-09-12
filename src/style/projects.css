@@ -1,3 +1,34 @@
+.arrow-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.left-arrow,
+.right-arrow {
+  background-color: #040911b4; /* Background color for arrow buttons */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+  background-color: #ffffff62; /* Hover background color */
+  color: black; /* Hover text color */
+}
+
+/* Additional styles for the left and right arrow buttons */
+.left-arrow {
+  margin-right: 10px;
+}
+
+.right-arrow {
+  margin-left: 10px;
+}/* Large screens */
 .projects {
   background: #0c1e3aee;
   height: 100vh;
@@ -36,7 +67,6 @@ img {
   width: 100%;
   display: block;
   border-radius: 20px 20px 0 0;
-  
 }
 
 .details {
@@ -68,7 +98,14 @@ img {
   text-decoration: none; /* Optional: Remove the underline */
 }
 
-/* Responsive adjustments for small screens */
+/* Responsive adjustments */
+
+/* Medium screens */
+@media screen and (max-width: 1024px) {
+  /* Add your styles for medium screens here */
+}
+
+/* Small screens */
 @media screen and (max-width: 768px) {
   .cards {
     grid-template-columns: 1fr;
@@ -82,7 +119,7 @@ img {
 
   .projects {
     background: #3a547a;
-    height: 280vh; /* Set height to cover the entire viewport */
+    height: auto; /* Set height to auto for variable content */
     display: grid;
     place-items: center center;
     padding: 0px;
@@ -90,65 +127,27 @@ img {
   }
 }
 
-.card-enter-animation {
-  animation: slide-in 0.5s ease forwards;
+/* Extra small devices */
+@media (max-width: 480px) {
+  /* Add your styles for extra small devices here */
 }
 
-@keyframes slide-in {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+/* Small tablets */
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Add your styles for small tablets here */
 }
 
-.card {
-  transform-style: preserve-3d;
-  transition: transform 0.5s;
-  cursor: pointer;
+/* Large tablets/laptops */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Add your styles for large tablets/laptops here */
 }
 
-.flipped {
-  transform: rotateY(180deg);
+/* Desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Add your styles for desktops here */
 }
 
-.projects-container {
-  width: 100%; /* Set a fixed width for the container */
-  overflow: hidden; /* Hide the overflow to create a viewport for cards */
-  position: relative;
-}
-
-.arrow-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-.left-arrow,
-.right-arrow {
-  background-color: #040911b4; /* Background color for arrow buttons */
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.left-arrow:hover,
-.right-arrow:hover {
-  background-color: #ffffff62; /* Hover background color */
-  color: black; /* Hover text color */
-}
-
-/* Additional styles for the left and right arrow buttons */
-.left-arrow {
-  margin-right: 10px;
-}
-
-.right-arrow {
-  margin-left: 10px;
+/* Larger desktops */
+@media (min-width: 1200px) and (max-width: 1919px) {
+  /* Add your styles for larger desktops here */
 }

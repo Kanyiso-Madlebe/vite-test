@@ -1,6 +1,5 @@
-*,
-*::after,
-*::before {
+/* Common styles for all devices */
+*, *::after, *::before {
     margin: 0;
     box-sizing: border-box;
 }
@@ -37,6 +36,7 @@ a {
 }
 
 .nav__brand {
+    width: 100%;
     text-transform: uppercase;
     font-weight: bold;
     margin-right: 80vh; /* Adjust as needed */
@@ -48,12 +48,12 @@ a {
     justify-content: space-around;
     gap: 3rem;
 }
+
 /* Style the active nav-link differently */
 .nav__menu a.active {
-    color: #ca7d7d; 
-    font-weight: bold; 
+    color: #ca7d7d;
+    font-weight: bold;
 }
-
 
 .nav__toggler div {
     width: 2.5rem;
@@ -68,14 +68,16 @@ a {
     display: none;
 }
 
+/* Media query for devices with max-width 768px (e.g., iPhone SE, XR, 12 Pro, Pixel 5) */
 @media screen and (max-width: 768px) {
     .nav__toggler {
         display: block;
-        margin-left: 30vh; /* Adjust as needed */
+        margin-left: 30px; /* Adjust as needed */
     }
 
     .nav__brand {
         margin: 0;
+        width: 100%;
     }
 
     .nav__menu {
@@ -103,39 +105,40 @@ a {
     .toggle .line2 {
         opacity: 0;
     }
+
     /* Toggler icon animation */
-.toggle .line1 {
-    transform: rotate(-45deg) translate(-3px, 5px);
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-3px, 5px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-3px, -5px);
+    }
+
+    /* Toggler icon animation for active state */
+    .nav__active .toggle .line1 {
+        transform: rotate(50deg) translate(7px, 7px);
+    }
+
+    .nav__active .toggle .line2 {
+        opacity: 0;
+    }
+
+    .nav__active .toggle .line3 {
+        transform: rotate(-45deg) translate(2.5px, 0);
+    }
 }
 
-.toggle .line2 {
-    opacity: 0;
-}
-
-.toggle .line3 {
-    transform: rotate(45deg) translate(-3px, -5px);
-}
-
-/* Toggler icon animation for active state */
-.nav__active .toggle .line1 {
-    transform: rotate(50deg) translate(7px, 7px);
-}
-
-.nav__active .toggle .line2 {
-    opacity: 0;
-}
-
-.nav__active .toggle .line3 {
-    transform: rotate(-45deg) translate(2.5px, 0);
-}
-}
-
+/* Media query for devices with max-width 480px (e.g., iPhone SE) */
 @media screen and (max-width: 480px) {
     .nav__toggler {
         display: block;
-        margin-left: 0vh; /* Adjust as needed */
+        margin-left: 0; /* Adjust as needed */
     }
-
 
     .nav__menu {
         position: absolute;
@@ -148,17 +151,23 @@ a {
         transition: 0.5s ease-in;
         z-index: 1000;
     }
+    .nav__brand {
+        width: 100%;
+    }
 }
 
-@media screen and(min-width: 900px) and (max-width: 1180px){
-    .nav__menu{
-        flex-direction: row; 
+/* Media query for devices with a screen width between 900px and 1180px */
+@media screen and (min-width: 900px) and (max-width: 1180px) {
+    .nav__menu {
+        flex-direction: row;
         gap: 3rem;
-        margin-right: 45vh;
-
+        margin-left: auto; /* Pushes the menu to the right */
     }
-    .nav__brand{
-        margin: left;
+
+    .nav__brand {
+        margin-right: auto; /* Pushes the brand to the left */
+        flex-direction: row;
     }
 }
-    
+
+  
