@@ -114,3 +114,6 @@ button[type="submit"]:hover {
     font-size: 14px;
   }
 }
+body {
+  overflow-y: scroll; /* Always show vertical scrollbar */
+}

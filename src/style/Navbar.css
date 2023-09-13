@@ -8,10 +8,6 @@ html {
     font-size: 62.5%;
 }
 
-body {
-    font-size: 1.6rem;
-}
-
 li {
     list-style: none;
     font-size: 20px;
@@ -25,7 +21,7 @@ a {
 .nav {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between; /* Use space-between to separate brand and menu */
     height: 8vh;
     background: #0f1e33;
     position: fixed;
@@ -36,10 +32,10 @@ a {
 }
 
 .nav__brand {
-    width: 100%;
     text-transform: uppercase;
     font-weight: bold;
-    margin-right: 80vh; /* Adjust as needed */
+    margin-right: 75vh; /* Move the brand to the left */
+    font-size: 24px; /* Add font size */
 }
 
 .nav__menu {
@@ -47,6 +43,7 @@ a {
     align-items: center;
     justify-content: space-around;
     gap: 3rem;
+    margin-right: 30px; /* Adjust as needed to move the menu a little to the left */
 }
 
 /* Style the active nav-link differently */
@@ -72,34 +69,32 @@ a {
 @media screen and (max-width: 768px) {
     .nav__toggler {
         display: block;
-        margin-left: 30px; /* Adjust as needed */
-    }
-
-    .nav__brand {
-        margin: 0;
-        width: 100%;
     }
 
     .nav__menu {
         position: absolute;
         top: 8vh;
-        right: 0;
-        width: 50%;
-        height: 40vh;
+        right: 0; /* Position the menu on the right */
+        width: 60%; /* Set the width to 60% to cover the screen */
         background: #1e3658;
         flex-direction: column;
         transform: translateX(100%);
         transition: 0.5s ease-in;
         z-index: 1000;
+        margin-right: 0;
+        height: auto;
+        max-height: 0;
+        overflow: hidden;
     }
-
+    
     .nav__active .nav__menu {
         transform: translateX(0);
+        max-height: 100%;
     }
 
     .toggle .line1,
     .toggle .line3 {
-        transform: rotate(-45deg) translate(-3px, 5px); /* Adjusted position */
+        transform: rotate(-45deg) translate(-3px, 5px);
     }
 
     .toggle .line2 {
@@ -132,42 +127,3 @@ a {
         transform: rotate(-45deg) translate(2.5px, 0);
     }
 }
-
-/* Media query for devices with max-width 480px (e.g., iPhone SE) */
-@media screen and (max-width: 480px) {
-    .nav__toggler {
-        display: block;
-        margin-left: 0; /* Adjust as needed */
-    }
-
-    .nav__menu {
-        position: absolute;
-        top: 8vh;
-        right: 0;
-        width: 100%;
-        height: 32vh;
-        flex-direction: column;
-        transform: translateX(100%);
-        transition: 0.5s ease-in;
-        z-index: 1000;
-    }
-    .nav__brand {
-        width: 100%;
-    }
-}
-
-/* Media query for devices with a screen width between 900px and 1180px */
-@media screen and (min-width: 900px) and (max-width: 1180px) {
-    .nav__menu {
-        flex-direction: row;
-        gap: 3rem;
-        margin-left: auto; /* Pushes the menu to the right */
-    }
-
-    .nav__brand {
-        margin-right: auto; /* Pushes the brand to the left */
-        flex-direction: row;
-    }
-}
-
-  

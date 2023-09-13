@@ -1,195 +1,185 @@
+/* Common styles for all devices */
+*, *::after, *::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+
+li {
+  list-style: none;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 /* Large screens */
 .about {
-  width: 100%;
-  padding: 78px 0px;
-  background: #1E3658;
-  height: 100vh;
+width: 100%;
+padding: 78px 0px;
+background: #1E3658;
+height: 100vh;
 }
 
 .about img {
-  width: 485px;
-  height: 500px;
-  flex-shrink: 0;
-  border-radius: 2px 2px 200px 2px;
-  margin-right: 40px;
+width: 400px;
+height: 410px;
+flex-shrink: 0;
+border-radius: 2px 2px 200px 2px;
+margin-right: 40px;
 }
 
 .about-text {
-  width: 550px;
-  margin-left: 40px;
+width: 550px;
+margin-left: 40px;
 }
 
 .main {
-  width: 1130px;
-  max-width: 95%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+width: 1030px;
+max-width: 95%;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: space-around;
 }
 
 .about-text h1 {
-  color: #900707;
-  font-size: 50px;
-  text-transform: capitalize;
-  margin-bottom: 20px;
+color: #900707;
+font-size: 50px;
+text-transform: capitalize;
+margin-bottom: 20px;
 }
 
 .about-text h5 {
-  color: white;
-  font-size: 25px;
-  text-transform: capitalize;
-  margin-bottom: 25px;
-  letter-spacing: 2px;
+color: white;
+font-size: 25px;
+text-transform: capitalize;
+margin-bottom: 25px;
+letter-spacing: 2px;
 }
 
 span {
-  color: white;
+color: white;
 }
 
 .about-text p {
-  color: #fff;
-  letter-spacing: 1px;
-  line-height: 28px;
-  font-size: 18px;
-  margin-bottom: 45px;
+color: #fff;
+letter-spacing: 1px;
+line-height: 28px;
+font-size: 18px;
+margin-bottom: 45px;
 }
 
 button {
-  background: rgba(128, 128, 128, 0.692);
-  color: #000;
-  text-decoration: none;
-  border: 2px solid transparent;
-  font-weight: bold;
-  padding: 13px 30px;
-  border-radius: 20px;
-  transition: 0.4s;
+background: rgba(128, 128, 128, 0.692);
+color: #000;
+text-decoration: none;
+border: 2px solid transparent;
+font-weight: bold;
+padding: 13px 30px;
+border-radius: 20px;
+transition: 0.4s;
 }
 
 button:hover {
-  background-color: #ffffff62 !important;
-  border: 2px solid #F5DCDC !important;
-  cursor: pointer;
+background-color: #ffffff62 !important;
+border: 2px solid #F5DCDC !important;
+cursor: pointer;
 }
 
 /* Responsive adjustments */
 
 /* Medium screens */
 @media screen and (max-width: 1024px) {
-  .about img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
+.about img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-right: 0;
+  margin-bottom: 20px;
+}
 
-  .about-text {
-    width: 100%;
-    margin-left: 0;
-    text-align: center;
-  }
+.about-text {
+  width: 100%;
+  margin-left: 0;
+  text-align: center;
+}
 
-  .main {
-    flex-direction: column;
-    align-items: center;
-  }
-  .about{
-    width: 100%;
-  }
+.main {
+  flex-direction: column;
+  align-items: center;
+}
+.about{
+  width: 100%;
+  padding: 40px 0; /* Reduce top and bottom padding */
+}
 }
 
 /* Small screens */
 @media screen and (max-width: 768px) {
-  .about-text h1 {
-    font-size: 36px;
-  }
-  
-  .about-text h5 {
-    font-size: 20px;
-  }
+.about-text h1 {
+  font-size: 36px;
+}
 
-  .about-text p {
-    font-size: 16px;
-  }
+.about-text h5 {
+  font-size: 20px;
+}
 
-  button {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-  
-  .about {
-    width: 100%;
-    height: 150vh;
-  }
+.about-text p {
+  font-size: 16px;
+}
+
+button {
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+.about {
+  width: 100%;
+  padding: 20px 0; /* Further reduce top and bottom padding */
+  height: auto; /* Remove fixed height to allow content to determine height */
+}
 }
 
 /* Extra small devices */
 @media (max-width: 480px) {
-  .about {
-    padding: 40px 0;
-    width: 100%;
-  }
-
-  .about img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  .about-text {
-    width: 100%;
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .about-text h1 {
-    font-size: 28px;
-  }
-
-  .about-text h5 {
-    font-size: 18px;
-  }
-
-  .about-text p {
-    font-size: 14px;
-    margin-bottom: 30px;
-  }
-
-  button {
-    font-size: 12px;
-    padding: 8px 16px;
-  }
+.about {
+  padding: 20px 0; /* Adjust padding as needed */
+}
 }
 
 /* Small tablets */
 @media (min-width: 481px) and (max-width: 767px) {
-  .about{
-    width: 100%;
-  }
+.about{
+  width: 100%;
+}
 }
 
 /* Large tablets/laptops */
 @media (min-width: 768px) and (max-width: 991px) {
-  .about{
-    width: 100%;
-  }
+.about{
+  width: 100%;
+}
 
 }
 
 /* Desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
-  .about{
-    width: 100%;
-    height: 100vh;
-  }
+.about{
+  width: 100%;
+ 
+}
 }
 
 /* Larger desktops */
 @media (min-width: 1200px) and (max-width: 1919px) {
-  .about{
-    width: 100%;
-  }
+.about {
+  height: fit-content; /* Adjust height to fit the content */
+}
 }
