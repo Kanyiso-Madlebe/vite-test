@@ -33,7 +33,7 @@ a {
 
 .nav__brand {
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 10px;
     margin-right: 75vh; /* Move the brand to the left */
     font-size: 24px; /* Add font size */
 }
