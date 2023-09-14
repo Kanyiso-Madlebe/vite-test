@@ -107,6 +107,7 @@ function Contact() {
   };
 
   return (
+    <div className="body">
     <section>
       <div className="contact" id="contact">
         <form onSubmit={handleFormSubmit}>
@@ -162,7 +163,7 @@ function Contact() {
           </div>
           <div className="field">
             <ReCAPTCHA
-              sitekey="6LfqMhgoAAAAAPXXssF_yhRaOBLWnmqjzqUhKznu"
+              sitekey="6LcRiiQoAAAAAJR500wYIq7svUJJndKc26Yw4L6x"
               onChange={handleRecaptchaChange}
             />
             {recaptchaValue === null && <span className="error">Please complete the reCAPTCHA</span>}
@@ -178,6 +179,7 @@ function Contact() {
         </div>
       </div>
     </section>
+    </div>
   );
 }
 

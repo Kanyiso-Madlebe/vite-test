@@ -76,7 +76,7 @@ function Projects() {
         </div>
         <div className="arrow-buttons" >
           <button className="left-arrow" onClick={showPreviousProjects}>
-            &lt; Previous
+            &lt; Back
           </button>
           <button className="right-arrow" onClick={showNextProjects}>
             Next &gt;

@@ -1,72 +1,41 @@
 import React, { useState } from 'react';
 import '../style/Navbar.css';
+import logo from '../images/KMW-logo.png';
 
-const NavBar = () => {
-  const [active, setActive] = useState(false);
-  const [toggleIcon, setToggleIcon] = useState(false);
-  const [currentPage, setCurrentPage] = useState('Home'); // Initialize with the default active page 
+function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const navToggle = () => {
-    setActive(!active);
-    setToggleIcon(!toggleIcon);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
-  const handleNavLinkClick = (page) => {
-    setCurrentPage(page);
-    setActive(false); // Close the navigation menu when a link is clicked
-    setToggleIcon(false);
+  // Function to close the menu when a list item is clicked
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
   return (
-    <nav className={`nav ${active ? 'nav__active' : ''}`}>
-      <a href="#" className="nav__brand">
-        Kanyiso Madlebe
-      </a>
-      <div onClick={navToggle} className={toggleIcon ? 'nav__toggler toggle' : 'nav__toggler'}>
-        <div className="line1"></div>
-        <div className="line2"></div>
-        <div className="line3"></div>
+    <div className="body">
+    <nav className="navbar">
+      <div className="navbar-logo">
+        <img src={logo} alt="Logo" className="nav__logo" />
       </div>
-      <ul className="nav__menu">
-        <li className="nav__item">
-          <a
-            href="#home"
-            className={`nav__link ${currentPage === 'Home' ? 'active' : ''}`}
-            onClick={() => handleNavLinkClick('Home')}
-          >
-            Home
-          </a>
-        </li>
-        <li className="nav__item">
-          <a
-            href="#about"
-            className={`nav__link ${currentPage === 'About' ? 'active' : ''}`}
-            onClick={() => handleNavLinkClick('About')}
-          >
-            About
-          </a>
-        </li>
-        <li className="nav__item">
-          <a
-            href="#projects"
-            className={`nav__link ${currentPage === 'Projects' ? 'active' : ''}`}
-            onClick={() => handleNavLinkClick('Projects')}
-          >
-            Projects
-          </a>
-        </li>
-        <li className="nav__item">
-          <a
-            href="#contact"
-            className={`nav__link ${currentPage === 'Contact' ? 'active' : ''}`}
-            onClick={() => handleNavLinkClick('Contact')}
-          >
-            Contact
-          </a>
-        </li>
-      </ul>
+      <div className={`navbar-menu ${menuOpen ? 'open' : ''}`}>
+        <ul>
+          <li><a href="#home" onClick={closeMenu}>Home</a></li>
+          <li><a href="#about" onClick={closeMenu}>About</a></li>
+          <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
+          <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
+        </ul>
+      </div>
+      <div className={`navbar-toggle ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
     </nav>
+    </div>
   );
-};
+}
 
-export default NavBar;
+export default Navbar;

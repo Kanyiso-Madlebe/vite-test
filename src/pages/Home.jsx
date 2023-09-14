@@ -7,6 +7,7 @@ import CV from '../components/resume.pdf';
 
 function Home() {
     return (
+        <div className="body">
         <div className="content">
         <section className="home" id="home">
         <div className="wallpaper" style={{ backgroundImage: `url(${Wall})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center center' }}>
@@ -64,6 +65,7 @@ function Home() {
             </div>
             </div>
         </section>
+        </div>
         </div>
     );
 }

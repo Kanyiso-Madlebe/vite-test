@@ -4,6 +4,7 @@ import Young from '../images/young.png';
 
 const About = () => {
   return (
+    <div className="body">
     <section className="about" id="about">
       <div className="main">
         <img src={Young} alt="Profile" />
@@ -23,6 +24,7 @@ const About = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 

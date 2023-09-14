@@ -9,6 +9,7 @@ function Footer() {
   };
 
   return (
+    <div className="body">
     <div className="footerContainer">
     <div className="socialIcons">
       <a href="https://github.com/Kanyiso-Madlebe" target="_blank" rel="noopener noreferrer">
@@ -64,6 +65,7 @@ function Footer() {
       <div className="footerBottom">
         <p>Copyright &copy;2023; Designed by,<span className="designer">Debeza</span></p>
       </div>
+    </div>
     </div>
   );
 }

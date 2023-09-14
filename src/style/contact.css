@@ -89,6 +89,7 @@ button[type="submit"]:hover {
   transform: translateX(-50%);
   z-index: 100;
 }
+
 .g-recaptcha {
   margin: 10px 20px;
 }
@@ -100,6 +101,7 @@ button[type="submit"]:hover {
     background: #1E3658;
     padding: 10px;
     position: relative;
+    height: auto; /* Remove fixed height for small screens */
   }
 
   form {
@@ -114,6 +116,9 @@ button[type="submit"]:hover {
     font-size: 14px;
   }
 }
+
+/* Ensure the body has a minimum height to fit the content */
 body {
   overflow-y: scroll; /* Always show vertical scrollbar */
+  min-height: 100vh; /* Set a minimum height of the viewport height */
 }

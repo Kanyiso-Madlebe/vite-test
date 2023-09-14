@@ -110,14 +110,17 @@
   }
 
   .content {
-    margin-bottom: 220px;
+    height: fit-content;
     width: 100%;
   }
 
-  .home-text {
+  .home-text,
+  .home-img-btn-container,
+  .software-title {
     width: 100%; /* Adjusted to take full width on smaller screens */
     text-align: center;
-    padding: 20px;
+    margin: 0; /* Remove margin */
+    padding: 20px; /* Add padding for spacing */
   }
 
   .red-text,
@@ -127,15 +130,13 @@
 
   .home-img-btn-container {
     width: 85%;
-    margin-right: 0;
-    margin-left: 0;
-    text-align: center;
-    margin-top: -11vh;
+    margin: 0 auto; /* Center the container */
+    padding-top: 10vh; /* Adjust spacing */
   }
 
-  .buttons-desktop {
-    position: relative;
-    margin-left: 0;
+  /* Ensure intro-text doesn't overlap with the image */
+  .intro-text {
+    margin-top: 20px; /* Add some top margin to create space */
   }
 
   .home,
