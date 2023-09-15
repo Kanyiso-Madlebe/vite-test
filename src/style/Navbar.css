@@ -61,6 +61,9 @@
 
 /* Media query for small devices */
 @media (max-width: 768px) {
+  .navbar{
+    width: 100%;
+  }
   .navbar-menu {
     display: none;
     flex-direction: column;

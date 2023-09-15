@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .body{
-  width: 100%;
+  max-width: 100%;
 }
 
 html {
@@ -155,6 +155,7 @@ button {
 @media (max-width: 480px) {
 .about {
   padding: 20px 0; /* Adjust padding as needed */
+  width: 100%;
 }
 }
 
