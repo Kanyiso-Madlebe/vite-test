@@ -5,6 +5,7 @@
 }
 .body{
   max-width: 100%;
+
 }
 
 html {
@@ -27,11 +28,11 @@ a {
 width: 100%;
 padding: 78px 0px;
 background: #1E3658;
-height: 100vh;
+max-height: 300vh;
 }
 
 .about img {
-width: 400px;
+width: 40%;
 height: 410px;
 flex-shrink: 0;
 border-radius: 2px 2px 200px 2px;
@@ -40,7 +41,7 @@ margin-right: 60px;
 
 .about-text {
 width: 550px;
-margin-left: 40px;
+margin-left: 50px;
 }
 
 .main {
@@ -88,7 +89,6 @@ font-weight: bold;
 padding: 13px 30px;
 border-radius: 20px;
 transition: 0.4s;
-size: 30px;
 }
 
 button:hover {

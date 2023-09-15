@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import '../style/Navbar.css';
+
+import '../style/navbar.css';
 import logo from '../images/KMW-logo.png';
 
 function Navbar() {
@@ -15,8 +16,7 @@ function Navbar() {
   };
 
   return (
-    <div className="body">
-    <nav className="navbar">
+    <nav className={`navbar ${menuOpen ? 'menu-open' : ''}`}>
       <div className="navbar-logo">
         <img src={logo} alt="Logo" className="nav__logo" />
       </div>
@@ -34,7 +34,6 @@ function Navbar() {
         <div className="bar"></div>
       </div>
     </nav>
-    </div>
   );
 }
 

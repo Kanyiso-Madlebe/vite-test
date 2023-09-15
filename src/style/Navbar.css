@@ -9,6 +9,7 @@
   padding: 15px 20px;
   color: #fff;
   z-index: 1000;
+  transition: all 0.3s ease; /* Add a smooth transition for width changes */
 }
 
 .navbar-logo img {
@@ -59,38 +60,36 @@
   margin: 3px 0;
 }
 
-/* Media query for small devices */
-@media (max-width: 768px) {
-  .navbar{
-    width: 100%;
-  }
-  .navbar-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: #264674;
-    width: 100%;
-    overflow: hidden;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-  }
 
-  .navbar-menu ul {
-    flex-direction: column;
-    justify-content: space-between;
-    font-weight: bold;
-    height: 60vh; /* Adjust the height as needed */
-    padding: 0;
-    
-  }
-
-  .navbar-menu.open {
-    max-height: 20vh;
-    display: flex;
-    flex-direction: column;
-  }
+  @media (max-width: 768px) {
+    .navbar {
+      width: 100%; /* Ensure the navigation bar spans the full width */
+    }
+  
+    .navbar-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #264674;
+      width: 100%;
+      overflow: hidden;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+      max-height: 0; /* Set max-height to 0 initially */
+    }
+  
+    .navbar-menu.open {
+      max-height: 60vh; /* Adjust the max-height as needed */
+      display: flex;
+      flex-direction: column;
+    }
+    .navbar-menu ul{
+      max-height: 30vh;
+      display: space-between;
+      flex-direction: column;
+    }
 
   .navbar-toggle {
     display: flex;

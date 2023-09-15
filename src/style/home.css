@@ -126,6 +126,7 @@
   .red-text,
   .white-text {
     font-size: 23px; /* Adjust font size for readability on smaller screens */
+    margin-top: 8vh;
   }
 
   .home-img-btn-container {
@@ -143,6 +144,9 @@
   .wallpaper {
     height: auto; /* Adjusted to make it responsive */
   }
+  .home-image{
+    display: none;
+  }
 }
 
 /* Desktops */
@@ -155,4 +159,6 @@
 
 .buttons-desktop {
   display: flex;
+  margin-top: 8vh;
+  margin-left: 5vh;
 }

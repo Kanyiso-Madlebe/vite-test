@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; 
 import emailjs from 'emailjs-com';
-import ReCAPTCHA from 'react-google-recaptcha'; // Import the reCAPTCHA component
+import ReCAPTCHA from 'react-google-recaptcha';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import '../style/contact.css';
 
 function Contact() {
@@ -8,10 +10,6 @@ function Contact() {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
-  const [nameError, setNameError] = useState('');
-  const [emailError, setEmailError] = useState('');
-  const [phoneError, setPhoneError] = useState('');
-  const [showConfirmation, setShowConfirmation] = useState(false); // State for the confirmation message
   const [recaptchaValue, setRecaptchaValue] = useState(null); // State to store reCAPTCHA value
 
   const validateForm = () => {
@@ -19,31 +17,32 @@ function Contact() {
 
     // Validation logic for each field
     if (!name) {
-      setNameError('Please enter your name');
+      toast.error('Please enter your name');
       isValid = false;
     } else if (!/^[A-Z][a-zA-Z\s]*$/.test(name)) {
-      setNameError('Name must start with a capital letter and contain letters and spaces only');
+      toast.error('Name must start with a capital letter and contain letters and spaces only');
       isValid = false;
-    } else {
-      setNameError('');
     }
+
     if (!email) {
-      setEmailError('Please enter your email');
+      toast.error('Please enter your email');
       isValid = false;
     } else if (!isValidEmail(email)) {
-      setEmailError('Please enter a valid email');
+      toast.error('Please enter a valid email');
       isValid = false;
-    } else {
-      setEmailError('');
     }
+
     if (!phone) {
-      setPhoneError('Please enter your phone number');
+      toast.error('Please enter your phone number');
       isValid = false;
     } else if (!/^\d{10}$/.test(phone)) {
-      setPhoneError('Phone number must be 10 digits');
+      toast.error('Phone number must be 10 digits');
       isValid = false;
-    } else {
-      setPhoneError('');
+    }
+
+    if (!recaptchaValue) {
+      toast.error('Please complete the reCAPTCHA');
+      isValid = false;
     }
 
     return isValid;
@@ -57,7 +56,7 @@ function Contact() {
   const handleFormSubmit = (event) => {
     event.preventDefault();
 
-    if (validateForm() && recaptchaValue) {
+    if (validateForm()) {
       const formData = {
         to_name: 'Recipient Name',
         from_name: 'Your Name',
@@ -79,24 +78,14 @@ function Contact() {
             setMessage('');
 
             // Show the confirmation message
-            setShowConfirmation(true);
-
-            // Hide the confirmation message after a few seconds
-            setTimeout(() => {
-              setShowConfirmation(false);
-            }, 5000); // Adjust the time as needed
-
-            // Clear the reCAPTCHA value after submission
-            setRecaptchaValue(null);
+            toast.success('Your message has been sent successfully!');
           },
           (error) => {
             console.error('EmailJS Error:', error);
             console.log(error.text);
+            toast.error('An error occurred while sending the email');
           }
         );
-    } else {
-      // Show an error message for reCAPTCHA
-      console.error('Please complete the reCAPTCHA');
     }
   };
 
@@ -108,77 +97,67 @@ function Contact() {
 
   return (
     <div className="body">
-    <section>
-      <div className="contact" id="contact">
-        <form onSubmit={handleFormSubmit}>
-          <h3>Having any queries? Contact Me:</h3>
-          <div className="field">
-            <input
-              type="text"
-              id="user_name"
-              name="user_name"
-              placeholder="Full Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-              autoComplete="off"
-            />
-            <span className="error">{nameError}</span>
-          </div>
-          <div className="field">
-            <input
-              type="email"
-              id="user_email"
-              name="user_email"
-              placeholder="name@mail.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              autoComplete="off"
-            />
-            <span className="error">{emailError}</span>
-          </div>
-          <div className="field">
-            <input
-              type="text"
-              id="user_phone"
-              name="user_phone"
-              placeholder="Phone number"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              required
-              autoComplete="off"
-            />
-            <span className="error">{phoneError}</span>
-          </div>
-          <div className="field">
-            <textarea
-              id="message"
-              name="message"
-              rows="4"
-              placeholder="How can we help you?"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-            ></textarea>
-          </div>
-          <div className="field">
-            <ReCAPTCHA
-              sitekey="6LcRiiQoAAAAAJR500wYIq7svUJJndKc26Yw4L6x"
-              onChange={handleRecaptchaChange}
-            />
-            {recaptchaValue === null && <span className="error">Please complete the reCAPTCHA</span>}
-          </div>
-          <button type="submit">Submit</button>
-        </form>
-        {/* Confirmation message */}
-        <div
-          className="confirmation-message"
-          style={{ display: showConfirmation ? 'block' : 'none' }}
-        >
-          Your message has been sent successfully!
+      <section>
+        <div className="contact" id="contact">
+          <form onSubmit={handleFormSubmit}>
+            <h3>Having any queries? Contact Me:</h3>
+            <div className="field">
+              <input
+                type="text"
+                id="user_name"
+                name="user_name"
+                placeholder="Full Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+                autoComplete="off"
+              />
+            </div>
+            <div className="field">
+              <input
+                type="email"
+                id="user_email"
+                name="user_email"
+                placeholder="name@mail.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                autoComplete="off"
+              />
+            </div>
+            <div className="field">
+              <input
+                type="text"
+                id="user_phone"
+                name="user_phone"
+                placeholder="Phone number"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                required
+                autoComplete="off"
+              />
+            </div>
+            <div className="field">
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="How can we help you?"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              ></textarea>
+            </div>
+            <div className="field">
+              <ReCAPTCHA
+                sitekey="6LcRiiQoAAAAAJR500wYIq7svUJJndKc26Yw4L6x"
+                onChange={handleRecaptchaChange}
+              />
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+          <ToastContainer autoClose={5000} />
         </div>
-      </div>
-    </section>
+      </section>
     </div>
   );
 }
