@@ -61,7 +61,7 @@ form h1 {
   color: rgb(184, 33, 33);
   margin-top: 5px;
   position: absolute;
-  bottom: -20px; /* Adjust this value as needed to position the error message */
+  bottom: -20px; 
 }
 
 button[type="submit"] {

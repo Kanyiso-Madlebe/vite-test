@@ -18,9 +18,12 @@ const About = () => {
               Let's connect and journey through the evolving landscape of coding and creativity.
             </p>
             
-            <button type="button"><a href="https://adorable-donut-35dd9f.netlify.app/" target="_blank" rel="noopener noreferrer">
-              Read More
-            </a></button>
+            <button type="button">
+              <a href="https://adorable-donut-35dd9f.netlify.app/" rel="noopener noreferrer">
+                Read More
+              </a>
+            </button>
+
           </div>
         </div>
       </section>
