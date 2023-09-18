@@ -1,11 +1,11 @@
 .footerContainer {
     background: #3A547A;
-    padding: 70px 30px 20px;
+    padding: 2px 3px; /* Adjust the top and bottom padding to decrease the height */
     display: flex;
     flex-direction: column;
     align-items: center;
     background-position: 0;
-    position: relative; /* Add position relative */
+    position: relative;
 }
 
 .socialIcons {
@@ -53,7 +53,7 @@
 .footerNav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.3em;
+    font-size: 1em;
     opacity: 0.7;
     transition: 0.3s;
 }
@@ -65,7 +65,7 @@
 
 .footerBottom {
     background-color: #3A547A;
-    padding: 20px;
+    padding: 1px 2px; /* Adjust the top and bottom padding to decrease the height */
     text-align: center;
     position: relative;
     z-index: 2;
