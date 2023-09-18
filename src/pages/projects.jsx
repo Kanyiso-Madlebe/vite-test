@@ -25,7 +25,6 @@ function Projects() {
       link: 'https://github.com/Kanyiso-Madlebe/Tax-Calculator',
       image: TaxCalculatorImage,
     },
-  
   ];
 
   // State to keep track of the currently visible projects
@@ -73,14 +72,6 @@ function Projects() {
               </div>
             </div>
           ))}
-        </div>
-        <div className="arrow-buttons" >
-          <button className="left-arrow" onClick={showPreviousProjects}>
-            &lt; Back
-          </button>
-          <button className="right-arrow" onClick={showNextProjects}>
-            Next &gt;
-          </button>
         </div>
       </div>
     </section>

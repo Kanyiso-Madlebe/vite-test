@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 50vh;
 }
 
 form {
@@ -21,17 +21,18 @@ form {
   position: relative; /* Add this line for positioning toast notifications */
 }
 
-form h3 {
+form h1 {
   color: #fff;
   font-weight: 800;
   margin-bottom: 20px;
   text-align: center;
+  font-size: 4vh;
 }
 
 .field {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: center; 
   margin-bottom: 10px; /* Add space between each field */
 }
 

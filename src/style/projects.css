@@ -1,40 +1,11 @@
-.arrow-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
 
-.left-arrow,
-.right-arrow {
-  background-color: #040911b4; /* Background color for arrow buttons */
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.left-arrow:hover,
-.right-arrow:hover {
-  background-color: #ffffff62; /* Hover background color */
-  color: black; /* Hover text color */
-}
-
-/* Additional styles for the left and right arrow buttons */
-.left-arrow {
-  margin-right: 10px;
-}
-
-.right-arrow {
-  margin-left: 10px;
-}/* Large screens */
+/* Large screens */
 .projects {
   background: #0c1e3aee;
   height: 100vh;
   display: grid;
   place-items: center center;
-  padding: 20px;
+  padding: 75px;
 }
 
 .cards {

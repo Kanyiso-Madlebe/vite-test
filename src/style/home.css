@@ -131,13 +131,13 @@
 
   .home-img-btn-container {
     width: 85%;
-    margin: 0 auto; /* Center the container */
-    padding-top: 10vh; /* Adjust spacing */
+    margin: 0 auto; 
+    padding-top: 10vh; 
   }
 
   /* Ensure intro-text doesn't overlap with the image */
   .intro-text {
-    margin-top: 20px; /* Add some top margin to create space */
+    margin-top: 20px; 
   }
 
   .home,

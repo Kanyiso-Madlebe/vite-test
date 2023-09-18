@@ -100,7 +100,7 @@ function Contact() {
       <section>
         <div className="contact" id="contact">
           <form onSubmit={handleFormSubmit}>
-            <h3>Having any queries? Contact Me:</h3>
+            <h1>Having any queries? Contact Me:</h1>
             <div className="field">
               <input
                 type="text"
