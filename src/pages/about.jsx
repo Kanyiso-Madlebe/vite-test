@@ -1,6 +1,6 @@
 import React from 'react';
 import '../style/about.css'; 
-import Young from '../images/young.png';
+import Young from '../images/co3.png';
 
 const About = () => {
   return (
