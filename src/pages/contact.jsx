@@ -96,7 +96,7 @@ function Contact() {
   };
 
   return (
-    <div className="body">
+    <div className="body">                                                                                                                                                                                                                                                                                                                                                                                                                                          
       <section>
         <div className="contact" id="contact">
           <form onSubmit={handleFormSubmit}>
@@ -153,7 +153,7 @@ function Contact() {
                 onChange={handleRecaptchaChange}
               />
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit">Send</button>
           </form>
           <ToastContainer autoClose={5000} />
         </div>

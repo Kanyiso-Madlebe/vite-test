@@ -1,7 +1,7 @@
 /* Large screens */
 .contact {
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   background: #1E3658;
   display: flex;
   align-items: center;
@@ -17,7 +17,7 @@ form {
   width: 90%;
   max-width: 600px;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-top: 1px;
   position: relative; /* Add this line for positioning toast notifications */
 }
 
@@ -45,12 +45,25 @@ form h1 {
   font-size: 16px;
   border-radius: 10px;
   flex: 3;
+  height: 20px;
 }
+
+.field input[type="text"],
+.field input[type="email"],
+.field textarea:not(#message) {
+  height: 30px; /* Adjust the desired height */
+}
+
+.field textarea#message {
+  height: auto; /* This retains the original height */
+}
+
 
 .field input[type="text"],
 .field input[type="email"],
 .field textarea {
   width: 100%;
+
 }
 
 .field textarea {
@@ -66,16 +79,20 @@ form h1 {
 
 button[type="submit"] {
   padding: 15px;
-  background: #accfce98;
+  background: #d9fffc98;
   color: #000;
   font-size: 18px;
   border: 0;
   outline: none;
   cursor: pointer;
-  width: 100px;
+  width: 80px;
+  height: 40px;
   margin: 20px auto 0;
   border-radius: 30px;
   transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button[type="submit"]:hover {

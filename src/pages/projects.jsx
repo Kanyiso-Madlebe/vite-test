@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../style/projects.css';
 import MzamomtshaImage from '../images/schW.jpg';
 import FinancialCalculatorImage from '../images/fifi.jpg';
 import TaxCalculatorImage from '../images/tatxtatx.jpg';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Projects() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   // Define an array to hold your project data
   const projectsData = [
     {
@@ -53,11 +58,11 @@ function Projects() {
   };
 
   return (
-    <section className="projects" id="projects">
-      <div className="about-text">
+    <section className="projects" id="projects"  >
+       <div className="about-text">
         <h2 className="section-title">Projects</h2>
       </div>
-      <div className="projects-container">
+      <div className="projects-container" data-aos="slide-right">
         <div className="cards">
           {visibleProjects.map((project, index) => (
             <div className="card card-enter-animation" key={index}>
@@ -68,7 +73,7 @@ function Projects() {
               </div>
               <div className="details">
                 <h3><a href={project.link} className="project-link">{project.title}</a></h3>
-                <p>{project.description}</p>
+                 <p>{project.description}</p>
               </div>
             </div>
           ))}
