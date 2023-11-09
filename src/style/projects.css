@@ -18,7 +18,7 @@
 .card {
   background-color: #ffffff62;
   border-radius: 20px;
-  box-shadow: 0 0 30px rgba(199, 174, 174, 0.336);
+  box-shadow: 0 0 30px rgba(199, 174, 174, 0.26);
   transition: transform 0.5s;
   cursor: pointer;
 }
